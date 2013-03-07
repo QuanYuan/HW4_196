@@ -1,0 +1,27 @@
+<h1>Listing presidents</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Office time</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @presidents.each do |president| %>
+  <tr>
+    <td><%= president.name %></td>
+    <td><%= president.age %></td>
+    <td><%= president.office_time %></td>
+    <td><%= link_to 'Show', president %></td>
+    <td><%= link_to 'Edit', edit_president_path(president) %></td>
+    <td><%= link_to 'Destroy', president, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New President', new_president_path %>

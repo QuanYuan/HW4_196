@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @president.name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @president.age %>
+</p>
+
+<p>
+  <b>Office time:</b>
+  <%= @president.office_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_president_path(@president) %> |
+<%= link_to 'Back', presidents_path %>

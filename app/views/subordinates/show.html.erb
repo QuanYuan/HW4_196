@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @subordinate.name %>
+</p>
+
+<p>
+  <b>Work for:</b>
+  <%= @subordinate.work_for %>
+</p>
+
+
+<%= link_to 'Edit', edit_subordinate_path(@subordinate) %> |
+<%= link_to 'Back', subordinates_path %>

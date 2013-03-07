@@ -1,0 +1,25 @@
+<h1>Listing subordinates</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Work for</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @subordinates.each do |subordinate| %>
+  <tr>
+    <td><%= subordinate.name %></td>
+    <td><%= subordinate.work_for %></td>
+    <td><%= link_to 'Show', subordinate %></td>
+    <td><%= link_to 'Edit', edit_subordinate_path(subordinate) %></td>
+    <td><%= link_to 'Destroy', subordinate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Subordinate', new_subordinate_path %>
